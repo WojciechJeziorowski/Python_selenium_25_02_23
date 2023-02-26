@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.7.0rc1 on win32)" generated="20230226 12:35:21.212" rpa="false" schemaversion="3">
+<suite id="s1" name="Wikipedia" source="D:\WSB Python\Programy\25.02\Git_Selenium\Python_selenium_25_02_23\Wikipedia.robot">
+<test id="s1-t1" name="Successful login to Wikipedia" line="24">
+<kw name="Log in Wikipedia">
+<arg>${wikipedia_login}</arg>
+<arg>${wikipedia_password}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://pl.wikipedia.org/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230226 12:35:21.473" level="INFO">Opening browser 'chrome' to base url 'https://pl.wikipedia.org/'.</msg>
+<status status="PASS" starttime="20230226 12:35:21.472" endtime="20230226 12:35:24.511"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:pt-login</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230226 12:35:24.513" level="INFO">Clicking element 'id:pt-login'.</msg>
+<status status="PASS" starttime="20230226 12:35:24.511" endtime="20230226 12:35:25.163"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${my_value}</var>
+<arg>id:wpName1</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230226 12:35:25.193" level="INFO">${my_value} = </msg>
+<status status="PASS" starttime="20230226 12:35:25.163" endtime="20230226 12:35:25.193"/>
+</kw>
+<kw name="Should Be Empty" library="BuiltIn">
+<arg>${my_value}</arg>
+<doc>Verifies that the given item is empty.</doc>
+<msg timestamp="20230226 12:35:25.194" level="INFO">Length is 0</msg>
+<status status="PASS" starttime="20230226 12:35:25.193" endtime="20230226 12:35:25.194"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:wpName1</arg>
+<arg>${login}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230226 12:35:25.194" level="INFO">Typing text 'RobotTests' into text field 'id:wpName1'.</msg>
+<status status="PASS" starttime="20230226 12:35:25.194" endtime="20230226 12:35:25.266"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>id:wpPassword1</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20230226 12:35:25.267" endtime="20230226 12:35:25.317"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id:wpPassword1</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230226 12:35:25.318" level="INFO">Typing password into text field 'id:wpPassword1'.</msg>
+<msg timestamp="20230226 12:35:25.339" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230226 12:35:25.396" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230226 12:35:25.318" endtime="20230226 12:35:25.396"/>
+</kw>
+<kw name="Checkbox Should Not Be Selected" library="SeleniumLibrary">
+<arg>wpRemember</arg>
+<doc>Verifies checkbox ``locator`` is not selected/checked.</doc>
+<msg timestamp="20230226 12:35:25.396" level="INFO">Verifying checkbox 'wpRemember' is not selected.</msg>
+<status status="PASS" starttime="20230226 12:35:25.396" endtime="20230226 12:35:25.425"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>wpRemember</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<msg timestamp="20230226 12:35:25.426" level="INFO">Selecting checkbox 'wpRemember'.</msg>
+<status status="PASS" starttime="20230226 12:35:25.426" endtime="20230226 12:35:25.489"/>
+</kw>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>wpRemember</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20230226 12:35:25.490" level="INFO">Verifying checkbox 'wpRemember' is selected.</msg>
+<status status="PASS" starttime="20230226 12:35:25.489" endtime="20230226 12:35:25.511"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:wpLoginAttempt</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230226 12:35:25.512" level="INFO">Clicking button 'id:wpLoginAttempt'.</msg>
+<status status="PASS" starttime="20230226 12:35:25.511" endtime="20230226 12:35:29.898"/>
+</kw>
+<status status="PASS" starttime="20230226 12:35:21.472" endtime="20230226 12:35:29.899"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230226 12:35:30.101" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230226 12:35:29.899" endtime="20230226 12:35:30.101"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230226 12:35:30.102" endtime="20230226 12:35:32.226"/>
+</kw>
+<status status="PASS" starttime="20230226 12:35:21.471" endtime="20230226 12:35:32.227"/>
+</test>
+<test id="s1-t2" name="Unsuccessful login to Wikipedia" line="29">
+<kw name="Log in Wikipedia">
+<arg>${wikipedia_login}</arg>
+<arg>abcd</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://pl.wikipedia.org/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230226 12:35:32.231" level="INFO">Opening browser 'chrome' to base url 'https://pl.wikipedia.org/'.</msg>
+<status status="PASS" starttime="20230226 12:35:32.231" endtime="20230226 12:35:34.871"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:pt-login</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230226 12:35:34.872" level="INFO">Clicking element 'id:pt-login'.</msg>
+<status status="PASS" starttime="20230226 12:35:34.871" endtime="20230226 12:35:35.549"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${my_value}</var>
+<arg>id:wpName1</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230226 12:35:35.578" level="INFO">${my_value} = </msg>
+<status status="PASS" starttime="20230226 12:35:35.549" endtime="20230226 12:35:35.578"/>
+</kw>
+<kw name="Should Be Empty" library="BuiltIn">
+<arg>${my_value}</arg>
+<doc>Verifies that the given item is empty.</doc>
+<msg timestamp="20230226 12:35:35.578" level="INFO">Length is 0</msg>
+<status status="PASS" starttime="20230226 12:35:35.578" endtime="20230226 12:35:35.578"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:wpName1</arg>
+<arg>${login}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230226 12:35:35.579" level="INFO">Typing text 'RobotTests' into text field 'id:wpName1'.</msg>
+<status status="PASS" starttime="20230226 12:35:35.578" endtime="20230226 12:35:35.662"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>id:wpPassword1</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20230226 12:35:35.662" endtime="20230226 12:35:35.703"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id:wpPassword1</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230226 12:35:35.704" level="INFO">Typing password into text field 'id:wpPassword1'.</msg>
+<msg timestamp="20230226 12:35:35.726" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230226 12:35:35.767" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230226 12:35:35.703" endtime="20230226 12:35:35.767"/>
+</kw>
+<kw name="Checkbox Should Not Be Selected" library="SeleniumLibrary">
+<arg>wpRemember</arg>
+<doc>Verifies checkbox ``locator`` is not selected/checked.</doc>
+<msg timestamp="20230226 12:35:35.768" level="INFO">Verifying checkbox 'wpRemember' is not selected.</msg>
+<status status="PASS" starttime="20230226 12:35:35.767" endtime="20230226 12:35:35.794"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>wpRemember</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<msg timestamp="20230226 12:35:35.795" level="INFO">Selecting checkbox 'wpRemember'.</msg>
+<status status="PASS" starttime="20230226 12:35:35.794" endtime="20230226 12:35:35.858"/>
+</kw>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>wpRemember</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20230226 12:35:35.859" level="INFO">Verifying checkbox 'wpRemember' is selected.</msg>
+<status status="PASS" starttime="20230226 12:35:35.858" endtime="20230226 12:35:35.878"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:wpLoginAttempt</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230226 12:35:35.879" level="INFO">Clicking button 'id:wpLoginAttempt'.</msg>
+<status status="PASS" starttime="20230226 12:35:35.878" endtime="20230226 12:35:36.834"/>
+</kw>
+<status status="PASS" starttime="20230226 12:35:32.230" endtime="20230226 12:35:36.834"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@id="userloginForm"]/form/div[1]</arg>
+<arg>3s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230226 12:35:36.834" endtime="20230226 12:35:36.867"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${current_error_message}</var>
+<arg>//*[@id="userloginForm"]/form/div[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230226 12:35:36.898" level="INFO">${current_error_message} = Podany login lub hasło są nieprawidłowe. Spróbuj jeszcze raz.</msg>
+<status status="PASS" starttime="20230226 12:35:36.868" endtime="20230226 12:35:36.898"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${current_error_message}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230226 12:35:36.899" level="INFO">Podany login lub hasło są nieprawidłowe. Spróbuj jeszcze raz.</msg>
+<status status="PASS" starttime="20230226 12:35:36.898" endtime="20230226 12:35:36.899"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${current_error_message}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230226 12:35:36.899" endtime="20230226 12:35:36.899"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${current_error_message}</arg>
+<arg>${error_message}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20230226 12:35:36.900" endtime="20230226 12:35:36.900"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230226 12:35:37.028" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230226 12:35:36.900" endtime="20230226 12:35:37.028"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230226 12:35:37.029" endtime="20230226 12:35:39.131"/>
+</kw>
+<status status="PASS" starttime="20230226 12:35:32.228" endtime="20230226 12:35:39.132"/>
+</test>
+<test id="s1-t3" name="Search in Wikipedia - wroclaw" line="39">
+<kw name="Log in Wikipedia">
+<arg>${wikipedia_login}</arg>
+<arg>${wikipedia_password}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://pl.wikipedia.org/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230226 12:35:39.135" level="INFO">Opening browser 'chrome' to base url 'https://pl.wikipedia.org/'.</msg>
+<status status="PASS" starttime="20230226 12:35:39.134" endtime="20230226 12:35:41.480"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:pt-login</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230226 12:35:41.481" level="INFO">Clicking element 'id:pt-login'.</msg>
+<status status="PASS" starttime="20230226 12:35:41.481" endtime="20230226 12:35:42.272"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${my_value}</var>
+<arg>id:wpName1</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230226 12:35:42.313" level="INFO">${my_value} = </msg>
+<status status="PASS" starttime="20230226 12:35:42.272" endtime="20230226 12:35:42.313"/>
+</kw>
+<kw name="Should Be Empty" library="BuiltIn">
+<arg>${my_value}</arg>
+<doc>Verifies that the given item is empty.</doc>
+<msg timestamp="20230226 12:35:42.313" level="INFO">Length is 0</msg>
+<status status="PASS" starttime="20230226 12:35:42.313" endtime="20230226 12:35:42.314"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:wpName1</arg>
+<arg>${login}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230226 12:35:42.314" level="INFO">Typing text 'RobotTests' into text field 'id:wpName1'.</msg>
+<status status="PASS" starttime="20230226 12:35:42.314" endtime="20230226 12:35:42.392"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>id:wpPassword1</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20230226 12:35:42.392" endtime="20230226 12:35:42.436"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id:wpPassword1</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230226 12:35:42.437" level="INFO">Typing password into text field 'id:wpPassword1'.</msg>
+<msg timestamp="20230226 12:35:42.470" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230226 12:35:42.522" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230226 12:35:42.436" endtime="20230226 12:35:42.522"/>
+</kw>
+<kw name="Checkbox Should Not Be Selected" library="SeleniumLibrary">
+<arg>wpRemember</arg>
+<doc>Verifies checkbox ``locator`` is not selected/checked.</doc>
+<msg timestamp="20230226 12:35:42.524" level="INFO">Verifying checkbox 'wpRemember' is not selected.</msg>
+<status status="PASS" starttime="20230226 12:35:42.522" endtime="20230226 12:35:42.550"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>wpRemember</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<msg timestamp="20230226 12:35:42.551" level="INFO">Selecting checkbox 'wpRemember'.</msg>
+<status status="PASS" starttime="20230226 12:35:42.551" endtime="20230226 12:35:42.613"/>
+</kw>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>wpRemember</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20230226 12:35:42.613" level="INFO">Verifying checkbox 'wpRemember' is selected.</msg>
+<status status="PASS" starttime="20230226 12:35:42.613" endtime="20230226 12:35:42.632"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:wpLoginAttempt</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230226 12:35:42.633" level="INFO">Clicking button 'id:wpLoginAttempt'.</msg>
+<status status="PASS" starttime="20230226 12:35:42.633" endtime="20230226 12:35:46.965"/>
+</kw>
+<status status="PASS" starttime="20230226 12:35:39.134" endtime="20230226 12:35:46.965"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:searchInput</arg>
+<arg>wroclaw</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230226 12:35:46.966" level="INFO">Typing text 'wroclaw' into text field 'id:searchInput'.</msg>
+<status status="PASS" starttime="20230226 12:35:46.965" endtime="20230226 12:35:47.054"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:searchButton</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230226 12:35:47.055" level="INFO">Clicking button 'id:searchButton'.</msg>
+<status status="PASS" starttime="20230226 12:35:47.054" endtime="20230226 12:35:49.026"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230226 12:35:51.027" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230226 12:35:49.027" endtime="20230226 12:35:51.027"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230226 12:35:51.027" endtime="20230226 12:35:53.133"/>
+</kw>
+<status status="PASS" starttime="20230226 12:35:39.133" endtime="20230226 12:35:53.133"/>
+</test>
+<test id="s1-t4" name="Search in Wikipedia - Border Colie" line="54">
+<kw name="Log in Wikipedia">
+<arg>${wikipedia_login}</arg>
+<arg>${wikipedia_password}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://pl.wikipedia.org/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230226 12:35:53.136" level="INFO">Opening browser 'chrome' to base url 'https://pl.wikipedia.org/'.</msg>
+<status status="PASS" starttime="20230226 12:35:53.136" endtime="20230226 12:35:55.977"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:pt-login</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230226 12:35:55.978" level="INFO">Clicking element 'id:pt-login'.</msg>
+<status status="PASS" starttime="20230226 12:35:55.977" endtime="20230226 12:35:56.478"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${my_value}</var>
+<arg>id:wpName1</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230226 12:35:56.507" level="INFO">${my_value} = </msg>
+<status status="PASS" starttime="20230226 12:35:56.478" endtime="20230226 12:35:56.507"/>
+</kw>
+<kw name="Should Be Empty" library="BuiltIn">
+<arg>${my_value}</arg>
+<doc>Verifies that the given item is empty.</doc>
+<msg timestamp="20230226 12:35:56.508" level="INFO">Length is 0</msg>
+<status status="PASS" starttime="20230226 12:35:56.507" endtime="20230226 12:35:56.508"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:wpName1</arg>
+<arg>${login}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230226 12:35:56.509" level="INFO">Typing text 'RobotTests' into text field 'id:wpName1'.</msg>
+<status status="PASS" starttime="20230226 12:35:56.508" endtime="20230226 12:35:56.609"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>id:wpPassword1</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20230226 12:35:56.610" endtime="20230226 12:35:56.651"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id:wpPassword1</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230226 12:35:56.652" level="INFO">Typing password into text field 'id:wpPassword1'.</msg>
+<msg timestamp="20230226 12:35:56.672" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230226 12:35:56.728" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230226 12:35:56.651" endtime="20230226 12:35:56.728"/>
+</kw>
+<kw name="Checkbox Should Not Be Selected" library="SeleniumLibrary">
+<arg>wpRemember</arg>
+<doc>Verifies checkbox ``locator`` is not selected/checked.</doc>
+<msg timestamp="20230226 12:35:56.730" level="INFO">Verifying checkbox 'wpRemember' is not selected.</msg>
+<status status="PASS" starttime="20230226 12:35:56.729" endtime="20230226 12:35:56.755"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>wpRemember</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<msg timestamp="20230226 12:35:56.755" level="INFO">Selecting checkbox 'wpRemember'.</msg>
+<status status="PASS" starttime="20230226 12:35:56.755" endtime="20230226 12:35:56.811"/>
+</kw>
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<arg>wpRemember</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<msg timestamp="20230226 12:35:56.811" level="INFO">Verifying checkbox 'wpRemember' is selected.</msg>
+<status status="PASS" starttime="20230226 12:35:56.811" endtime="20230226 12:35:56.825"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:wpLoginAttempt</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230226 12:35:56.826" level="INFO">Clicking button 'id:wpLoginAttempt'.</msg>
+<status status="PASS" starttime="20230226 12:35:56.825" endtime="20230226 12:36:00.841"/>
+</kw>
+<status status="PASS" starttime="20230226 12:35:53.135" endtime="20230226 12:36:00.842"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:searchInput</arg>
+<arg>Border Colie</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230226 12:36:00.844" level="INFO">Typing text 'Border Colie' into text field 'id:searchInput'.</msg>
+<status status="PASS" starttime="20230226 12:36:00.843" endtime="20230226 12:36:00.962"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:searchButton</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230226 12:36:00.963" level="INFO">Clicking button 'id:searchButton'.</msg>
+<status status="PASS" starttime="20230226 12:36:00.962" endtime="20230226 12:36:02.206"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230226 12:36:04.208" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230226 12:36:02.208" endtime="20230226 12:36:04.208"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230226 12:36:04.208" endtime="20230226 12:36:06.316"/>
+</kw>
+<status status="PASS" starttime="20230226 12:35:53.134" endtime="20230226 12:36:06.316"/>
+</test>
+<status status="PASS" starttime="20230226 12:35:21.214" endtime="20230226 12:36:06.318"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="Wikipedia">Wikipedia</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
