@@ -18,7 +18,7 @@ def test_login_page(username, password, url):
     page.enter_username(username)
     page.enter_password(password)
     page.click_login()
-    time.sleep(2)
+    time.sleep(1)
 
     try:
         assert driver.current_url == url, make_screenshot(driver)
@@ -30,7 +30,7 @@ def test_login_page(username, password, url):
         print('Jestesmy po asercji')
         driver.quit()
 
-
+    print('Dodałem nowego brancha')
 
 # def test_login_page():
 #     driver = webdriver.Chrome()
